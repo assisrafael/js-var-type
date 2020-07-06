@@ -1,0 +1,43 @@
+{
+  "name": "js-var-type",
+  "version": "0.0.1",
+  "description": "A JS library to check variable type at runtime",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "rollup --config",
+    "release": "standard-version",
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint {src,demo}\"/**/*.\"{js,jsx}",
+    "prettier": "prettier {src,demo}\"/**/*.\"{js,jsx}",
+    "ci": "npm run prettier -- --list-different && npm run eslint",
+    "lint": "npm run eslint -- --fix",
+    "format": "npm run prettier -- --write",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assisrafael/js-var-type.git"
+  },
+  "keywords": [
+    "types",
+    "runtime"
+  ],
+  "author": "Igor Rafael <igor.rafael@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/assisrafael/js-var-type/issues"
+  },
+  "homepage": "https://github.com/assisrafael/js-var-type#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-node-resolve": "^8.1.0",
+    "@types/jest": "^26.0.3",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.4.0",
+    "jest": "^26.1.0",
+    "prettier": "^2.0.5",
+    "rollup": "^2.20.0",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}
