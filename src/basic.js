@@ -1,5 +1,5 @@
 export function isUndefined(value) {
-  return typeof value === "undefined";
+  return typeof value === 'undefined';
 }
 
 export function isDefined(value) {
@@ -11,5 +11,5 @@ export function isNull(value) {
 }
 
 export function isFunction(value) {
-  return typeof value === "function";
+  return typeof value === 'function';
 }

@@ -1,7 +1,7 @@
-import { isNull } from "./basic";
+import { isNull } from './basic';
 
 export function isObject(value) {
-  return !isNull(value) && typeof value == "object";
+  return !isNull(value) && typeof value == 'object';
 }
 
 export function isPlainObject(value) {
