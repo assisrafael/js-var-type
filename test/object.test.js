@@ -9,6 +9,7 @@ test('isObject', () => {
   expect(isObject(undefined)).toBeFalsy();
   expect(isObject('')).toBeFalsy();
   expect(isObject(1)).toBeFalsy();
+  expect(isObject([])).toBeFalsy();
 });
 
 test('isPlainObject', () => {
@@ -16,6 +17,13 @@ test('isPlainObject', () => {
   expect(isPlainObject(new Object())).toBeTruthy();
   expect(isPlainObject(new Number(4))).toBeFalsy();
   expect(isPlainObject(new Date())).toBeFalsy();
+  expect(
+    isPlainObject(
+      new (function () {
+        this.x = 5;
+      })()
+    )
+  ).toBeFalsy();
   expect(isPlainObject(null)).toBeFalsy();
   expect(isPlainObject(undefined)).toBeFalsy();
   expect(isPlainObject('')).toBeFalsy();

@@ -1,7 +1,8 @@
 import { isNull } from './basic';
+import { isArray } from './array';
 
 export function isObject(value) {
-  return !isNull(value) && typeof value == 'object';
+  return typeof value == 'object' && !isNull(value) && !isArray(value);
 }
 
 export function isPlainObject(value) {
