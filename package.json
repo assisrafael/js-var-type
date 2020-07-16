@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/assisrafael/js-var-type#readme",
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
-    "@rollup/plugin-node-resolve": "^8.1.0",
-    "@types/jest": "^26.0.3",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "@types/jest": "^26.0.4",
     "babel-jest": "^26.1.0",
     "eslint": "^7.4.0",
     "jest": "^26.1.0",
     "prettier": "^2.0.5",
-    "rollup": "^2.20.0",
+    "rollup": "^2.21.0",
     "rollup-plugin-babel": "^4.4.0"
   }
 }
