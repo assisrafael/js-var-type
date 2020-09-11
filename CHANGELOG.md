@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/assisrafael/js-var-type/compare/v0.2.1...v0.2.2) (2020-09-11)
+
+
+### Features
+
+* new boolean comparisons ([314ce17](https://github.com/assisrafael/js-var-type/commit/314ce1794b3677df2ca768ef79cd24ea4c06a6ee))
+
 ### [0.2.1](https://github.com/assisrafael/js-var-type/compare/v0.2.0...v0.2.1) (2020-08-26)
 
 
