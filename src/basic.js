@@ -16,7 +16,3 @@ export function isNullLike(value) {
 export function isFunction(value) {
   return typeof value === 'function';
 }
-
-export function isBoolean(value) {
-  return typeof value === 'boolean';
-}

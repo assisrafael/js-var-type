@@ -1,4 +1,4 @@
-import { isNull, isFunction, isDefined, isUndefined, isBoolean, isNullLike } from '../src/basic';
+import { isNull, isFunction, isDefined, isUndefined, isNullLike } from '../src/basic';
 
 test('isUndefined', () => {
   expect(isUndefined(undefined)).toBeTruthy();
@@ -49,16 +49,4 @@ test('isFunction', () => {
   expect(isFunction([])).toBeFalsy();
   expect(isFunction('')).toBeFalsy();
   expect(isFunction(6)).toBeFalsy();
-});
-
-test('isBoolean', () => {
-  expect(isBoolean(false)).toBeTruthy();
-  expect(isBoolean(true)).toBeTruthy();
-  expect(isBoolean(() => {})).toBeFalsy();
-  expect(isBoolean(undefined)).toBeFalsy();
-  expect(isBoolean(null)).toBeFalsy();
-  expect(isBoolean({})).toBeFalsy();
-  expect(isBoolean([])).toBeFalsy();
-  expect(isBoolean('')).toBeFalsy();
-  expect(isBoolean(6)).toBeFalsy();
 });
