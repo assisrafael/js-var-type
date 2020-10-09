@@ -1,4 +1,4 @@
-import { isString } from './string';
+import { isString } from './string.js';
 
 export function isDate(value) {
   return Object.prototype.toString.call(value) === '[object Date]';

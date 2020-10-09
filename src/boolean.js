@@ -1,4 +1,4 @@
-import { isString } from './string';
+import { isString } from './string.js';
 
 export function isBoolean(value) {
   return typeof value === 'boolean';

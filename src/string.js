@@ -1,6 +1,6 @@
-import { isUndefined, isNull } from './basic';
-import { isEmptyArray } from './array';
-import { isEmptyObject } from './object';
+import { isUndefined, isNull } from './basic.js';
+import { isEmptyArray } from './array.js';
+import { isEmptyObject } from './object.js';
 
 export function isString(value) {
   return typeof value === 'string';

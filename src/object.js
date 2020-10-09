@@ -1,5 +1,5 @@
-import { isNull } from './basic';
-import { isArray } from './array';
+import { isNull } from './basic.js';
+import { isArray } from './array.js';
 
 export function isObject(value) {
   return typeof value == 'object' && !isNull(value) && !isArray(value);

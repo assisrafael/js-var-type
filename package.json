@@ -4,6 +4,10 @@
   "description": "A JS library to check variable type at runtime",
   "main": "dist/main.js",
   "type": "module",
+  "exports": {
+    "import": "./dist/main.js",
+    "require": "./dist/main.cjs"
+  },
   "scripts": {
     "build": "rollup --config",
     "release": "standard-version",
