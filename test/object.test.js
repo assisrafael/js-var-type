@@ -15,12 +15,23 @@ test('isObject', () => {
 test('isPlainObject', () => {
   expect(isPlainObject({})).toBeTruthy();
   expect(isPlainObject(new Object())).toBeTruthy();
+  expect(isPlainObject(JSON.parse('{"a":{"b":5}}'))).toBeTruthy();
+  expect(isPlainObject([1, 2, 3])).toBeFalsy();
   expect(isPlainObject(new Number(4))).toBeFalsy();
   expect(isPlainObject(new Date())).toBeFalsy();
   expect(
     isPlainObject(
       new (function () {
         this.x = 5;
+      })()
+    )
+  ).toBeFalsy();
+  expect(
+    isPlainObject(
+      new (class {
+        constructor() {
+          this.x = 5;
+        }
       })()
     )
   ).toBeFalsy();
