@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/assisrafael/js-var-type/compare/v0.2.5...v0.2.6) (2020-12-03)
+
+
+### Features
+
+* **object:** include isPrimitive function ([567fc6e](https://github.com/assisrafael/js-var-type/commit/567fc6e35c3ea6e44ca34e8138a8f3d49b15be03))
+
 ### [0.2.5](https://github.com/assisrafael/js-var-type/compare/v0.2.4...v0.2.5) (2020-12-03)
 
 

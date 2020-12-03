@@ -1,6 +1,6 @@
 {
   "name": "js-var-type",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A JS library to check variable type at runtime",
   "main": "dist/main.js",
   "type": "module",
