@@ -1,5 +1,5 @@
 import resolve from '@rollup/plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 
 const baseConfig = {
   input: 'src/index.js',
@@ -7,13 +7,17 @@ const baseConfig = {
     resolve({
       extensions: ['.mjs', '.js', '.json', '.jsx'],
     }),
-    babel({
-      exclude: 'node_modules/**', // only transpile our source code
-    }),
   ],
 };
 
 export default [
+  {
+    ...baseConfig,
+    output: {
+      file: 'dist/main.js',
+      format: 'es',
+    },
+  },
   {
     ...baseConfig,
     output: {
@@ -23,9 +27,16 @@ export default [
   },
   {
     ...baseConfig,
+    plugins: baseConfig.plugins.concat([
+      babel({
+        babelHelpers: 'runtime',
+        exclude: /node_modules/, // only transpile our source code
+      }),
+    ]),
     output: {
-      file: 'dist/main.js',
+      file: 'dist/main.es5.js',
       format: 'es',
     },
+    external: [/@babel\/runtime/],
   },
 ];
