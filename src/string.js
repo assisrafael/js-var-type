@@ -17,3 +17,15 @@ export function isEmptyStringLike(value) {
 export function isEmptyLike(value) {
   return isEmptyStringLike(value) || isEmptyArray(value) || isEmptyObject(value);
 }
+
+export function isNonEmptyString(value) {
+  return isString(value) && value.length > 0;
+}
+
+export function isChar(value) {
+  return isString(value) && value.length === 1;
+}
+
+export function isDigit(char) {
+  return isChar(char) && /\d/.test(char);
+}
