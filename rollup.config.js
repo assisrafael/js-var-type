@@ -1,13 +1,8 @@
-import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 
 const baseConfig = {
   input: 'src/index.js',
-  plugins: [
-    resolve({
-      extensions: ['.mjs', '.js', '.json', '.jsx'],
-    }),
-  ],
+  plugins: [],
 };
 
 export default [
