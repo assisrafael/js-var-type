@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/assisrafael/js-var-type/compare/v0.2.4...v0.2.5) (2020-12-03)
+
+
+### Features
+
+* **string:** include new functions isNonEmptyString, isChar, isDigit ([ca5365d](https://github.com/assisrafael/js-var-type/commit/ca5365df98202b5c70a48a894e7e0b205ca34108))
+
 ### [0.2.4](https://github.com/assisrafael/js-var-type/compare/v0.2.3...v0.2.4) (2020-10-09)
 
 
