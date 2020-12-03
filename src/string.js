@@ -1,5 +1,5 @@
-import { isUndefined, isNull } from './basic.js';
 import { isEmptyArray } from './array.js';
+import { isNullLike } from './basic.js';
 import { isEmptyObject } from './object.js';
 
 export function isString(value) {
@@ -11,7 +11,7 @@ export function isEmptyString(value) {
 }
 
 export function isEmptyStringLike(value) {
-  return isUndefined(value) || isNull(value) || isEmptyString(value);
+  return isNullLike(value) || isEmptyString(value);
 }
 
 export function isEmptyLike(value) {

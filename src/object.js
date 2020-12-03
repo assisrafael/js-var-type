@@ -1,6 +1,6 @@
 import { isArray } from './array.js';
+import { isNull, isNullLike } from './basic.js';
 import { isBoolean } from './boolean.js';
-import { isNull, isUndefined } from './basic.js';
 import { isNumber } from './number.js';
 import { isString } from './string.js';
 
@@ -17,5 +17,5 @@ export function isEmptyObject(value) {
 }
 
 export function isPrimitive(value) {
-  return isString(value) || isNumber(value) || isBoolean(value) || isNull(value) || isUndefined(value);
+  return isString(value) || isNumber(value) || isBoolean(value) || isNullLike(value);
 }
