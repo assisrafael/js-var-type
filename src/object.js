@@ -1,8 +1,8 @@
-import { isArray } from './array.js';
+import { isArray, isEmptyArray } from './array.js';
 import { isNull, isNullLike } from './basic.js';
 import { isBoolean } from './boolean.js';
 import { isNumber } from './number.js';
-import { isString } from './string.js';
+import { isEmptyStringLike, isString } from './string.js';
 
 export function isObject(value) {
   return typeof value == 'object' && !isNull(value) && !isArray(value);
@@ -14,6 +14,10 @@ export function isPlainObject(value) {
 
 export function isEmptyObject(value) {
   return isPlainObject(value) && Object.keys(value).length === 0;
+}
+
+export function isEmptyLike(value) {
+  return isEmptyStringLike(value) || isEmptyArray(value) || isEmptyObject(value);
 }
 
 export function isPrimitive(value) {

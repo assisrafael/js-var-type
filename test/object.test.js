@@ -1,4 +1,4 @@
-import { isObject, isPlainObject, isPrimitive } from '../src/object';
+import { isEmptyLike, isObject, isPlainObject, isPrimitive } from '../src/object';
 
 test('isObject', () => {
   expect(isObject({})).toBeTruthy();
@@ -39,6 +39,17 @@ test('isPlainObject', () => {
   expect(isPlainObject(undefined)).toBeFalsy();
   expect(isPlainObject('')).toBeFalsy();
   expect(isPlainObject(1)).toBeFalsy();
+});
+
+test('isEmptyLike', () => {
+  expect(isEmptyLike('')).toBeTruthy();
+  expect(isEmptyLike(null)).toBeTruthy();
+  expect(isEmptyLike(undefined)).toBeTruthy();
+  expect(isEmptyLike({})).toBeTruthy();
+  expect(isEmptyLike([])).toBeTruthy();
+  expect(isEmptyLike('lorem ipsum')).toBeFalsy();
+  expect(isEmptyLike([1, 2, 3])).toBeFalsy();
+  expect(isEmptyLike({ a: 1 })).toBeFalsy();
 });
 
 test('isPrimitive', () => {

@@ -1,12 +1,4 @@
-import {
-  isString,
-  isEmptyString,
-  isEmptyStringLike,
-  isEmptyLike,
-  isDigit,
-  isChar,
-  isNonEmptyString,
-} from '../src/string';
+import { isString, isEmptyString, isEmptyStringLike, isDigit, isChar, isNonEmptyString } from '../src/string';
 
 test('isString', () => {
   expect(isString('')).toBeTruthy();
@@ -34,17 +26,6 @@ test('isEmptyStringLike', () => {
   expect(isEmptyStringLike('lorem ipsum')).toBeFalsy();
   expect(isEmptyStringLike({})).toBeFalsy();
   expect(isEmptyStringLike([])).toBeFalsy();
-});
-
-test('isEmptyLike', () => {
-  expect(isEmptyLike('')).toBeTruthy();
-  expect(isEmptyLike(null)).toBeTruthy();
-  expect(isEmptyLike(undefined)).toBeTruthy();
-  expect(isEmptyLike({})).toBeTruthy();
-  expect(isEmptyLike([])).toBeTruthy();
-  expect(isEmptyLike('lorem ipsum')).toBeFalsy();
-  expect(isEmptyLike([1, 2, 3])).toBeFalsy();
-  expect(isEmptyLike({ a: 1 })).toBeFalsy();
 });
 
 test('isNonEmptyString', () => {
